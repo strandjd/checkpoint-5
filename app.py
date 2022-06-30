@@ -90,7 +90,7 @@ def api_func():
             return "not found"
         return phone[0][0]
 
-    if action == 'name':
+    elif action == 'name':
         phone = args.get('phone', default="No phone", type=str)
         if phone == "No phone":
             return render_template('api_usage.html', action=action), 'This phonenumber didnt work.\nTry other phonenumber.'
